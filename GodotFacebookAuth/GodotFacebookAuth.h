@@ -5,8 +5,26 @@
 //  Created by Oleksandr Kurtsev on 12/09/2021.
 //
 
-#import <Foundation/Foundation.h>
+#import "core/engine.h"
 
-@interface GodotFacebookAuth : NSObject
+#define PLUGIN_NAME "GodotFacebookAuth"
+#define PLUGIN_VERSION "0.0.0"
 
-@end
+#define SIGNAL_CREDENTIAL "credential"
+#define SIGNAL_AUTHORIZATION "authorization"
+
+void init_godot_facebook_auth();
+void deinit_godot_facebook_auth();
+
+class GodotFacebookAuth : public Object {
+    
+    GDCLASS(GodotFacebookAuth, Object);
+    static void _bind_methods();
+    
+public:
+    
+    void signIn();
+    void signOut();
+    void credential();
+    
+};
