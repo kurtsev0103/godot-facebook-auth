@@ -1,0 +1,15 @@
+FBAEMKit
+FacebookSDK_Static_11.2.0/FBAEMKit.framework/Headers
+FacebookSDK_Static_11.2.0/FBAEMKit.framework/Modules
+
+FBSDKCoreKit
+FacebookSDK_Static_11.2.0/FBSDKCoreKit.framework/Headers
+FacebookSDK_Static_11.2.0/FBSDKCoreKit.framework/Modules
+
+FBSDKCoreKit_Basics
+FacebookSDK_Static_11.2.0/FBSDKCoreKit_Basics.framework/Headers
+FacebookSDK_Static_11.2.0/FBSDKCoreKit_Basics.framework/Modules
+
+FBSDKLoginKit
+FacebookSDK_Static_11.2.0/FBSDKLoginKit.framework/Headers
+FacebookSDK_Static_11.2.0/FBSDKLoginKit.framework/Modules
