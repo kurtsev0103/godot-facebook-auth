@@ -3,7 +3,7 @@ Plugin for authorization with Facebook for Godot Game Engine (iOS)
 
 ## Installation
 
-1. [Download Plugin](https://github.com/kurtsev0103/godot-facebook-auth/releases/download/1.0.0/GodotFacebookAuth_plugin.zip), unzip and copy files to your Godot project's ```res://ios/plugins``` directory. You can also group files in a sub-directory, like ```res://ios/plugins/godot_facebook_auth```
+1. [Download Plugin](https://github.com/kurtsev0103/godot-facebook-auth/releases/download/1.0.1/GodotFacebookAuth_plugin.zip), unzip and copy files to your Godot project's ```res://ios/plugins``` directory. You can also group files in a sub-directory, like ```res://ios/plugins/godot_facebook_auth```
 2. You can find and activate plugin by going to Project -> Export... -> iOS and in the Options tab, scrolling to the Plugins section.
 
 <img width="429" alt="img" src="https://user-images.githubusercontent.com/27446881/132989486-73508e21-bdc7-4d01-accc-4b316866149e.png">
