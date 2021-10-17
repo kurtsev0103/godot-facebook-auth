@@ -27,4 +27,7 @@ public:
     void signOut();
     void credential();
     
+    GodotFacebookAuth();
+    ~GodotFacebookAuth();
+    
 };

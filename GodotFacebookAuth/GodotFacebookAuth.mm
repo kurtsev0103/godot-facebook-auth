@@ -35,6 +35,10 @@ void GodotFacebookAuth::_bind_methods() {
     ADD_SIGNAL(MethodInfo(String(SIGNAL_AUTHORIZATION), PropertyInfo(Variant::DICTIONARY, "result")));
 }
 
+GodotFacebookAuth::GodotFacebookAuth() {}
+
+GodotFacebookAuth::~GodotFacebookAuth() {}
+
 #pragma mark - Implementation -
 
 void GodotFacebookAuth::signIn() {
