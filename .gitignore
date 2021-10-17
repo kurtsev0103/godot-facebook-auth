@@ -1,15 +1,19 @@
-FBAEMKit
-FacebookSDK_Static_11.2.0/FBAEMKit.framework/Headers
-FacebookSDK_Static_11.2.0/FBAEMKit.framework/Modules
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-FBSDKCoreKit
-FacebookSDK_Static_11.2.0/FBSDKCoreKit.framework/Headers
-FacebookSDK_Static_11.2.0/FBSDKCoreKit.framework/Modules
+.DS_Store
 
-FBSDKCoreKit_Basics
-FacebookSDK_Static_11.2.0/FBSDKCoreKit_Basics.framework/Headers
-FacebookSDK_Static_11.2.0/FBSDKCoreKit_Basics.framework/Modules
+## User settings
+xcuserdata/
 
-FBSDKLoginKit
-FacebookSDK_Static_11.2.0/FBSDKLoginKit.framework/Headers
-FacebookSDK_Static_11.2.0/FBSDKLoginKit.framework/Modules
+## Gcc Patch
+/*.gcno
+
+*.d
+*.o
+*.dblite
+
+## Godot Plugins
+godot_headers/*
+bin/*
