@@ -5,7 +5,7 @@ plugin_name=GodotFacebookAuth
 scons_version=3.x
 godot_version=3.3.4
 
-declare -a targets=(release release_debug)
+declare -a targets=(Release Debug)
 
 # Checking the validity of version
 function validating_version() {
@@ -44,21 +44,27 @@ cd ./../
 # Compile static libraries
 for target in ${targets[@]}
 do
-  scons plugin=$plugin_name target=$target version=$scons_version arch=arm64 --jobs=$(sysctl -n hw.logicalcpu)
-  scons plugin=$plugin_name target=$target version=$scons_version arch=x86_64 simulator=yes --jobs=$(sysctl -n hw.logicalcpu)
+  xcodebuild -target $plugin_name -configuration $target -sdk iphoneos ONLY_ACTIVE_ARCH=NO BUILD_DIR="./bin"
+  xcodebuild -target $plugin_name -configuration $target -sdk iphonesimulator -arch x86_64 BUILD_DIR="./bin"
 
   output=release
-  if [ $target = release_debug ]; then
+  if [ $target = Debug ]; then
     output=debug
   fi
 
-  lipo -create ./bin/lib$plugin_name.arm64-iphone.$target.a ./bin/lib$plugin_name.x86_64-simulator.$target.a -output ./bin/$plugin_name.$output.a
-  rm ./bin/lib$plugin_name.arm64-iphone.$target.a
-  rm ./bin/lib$plugin_name.x86_64-simulator.$target.a
+  lipo -create ./bin/$target"-iphoneos"/lib$plugin_name.a \
+    ./bin/$target"-iphonesimulator"/lib$plugin_name.a -output \
+    ./bin/$plugin_name.$output.a
+
+  rm -r ./bin/$target"-iphonesimulator"
+  rm -r ./bin/$target"-iphoneos"
 done
 
 # Archiving plugin
-zip ./bin/"$plugin_name"_for_Godot_$godot_version.zip ./bin/$plugin_name.release.a ./bin/$plugin_name.debug.a ./$plugin_name.gdip
+zip ./bin/"$plugin_name"_for_Godot_$godot_version.zip \
+  ./bin/$plugin_name.release.a ./bin/$plugin_name.debug.a \
+  ./$plugin_name.gdip \
+  -r ./FacebookSDK
 
 rm ./bin/$plugin_name.release.a
 rm ./bin/$plugin_name.debug.a

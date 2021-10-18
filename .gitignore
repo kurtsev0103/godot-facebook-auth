@@ -17,3 +17,4 @@ xcuserdata/
 ## Godot Plugins
 godot_headers/*
 bin/*
+build

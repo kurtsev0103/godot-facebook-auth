@@ -9,10 +9,10 @@ deinitialization="deinit_godot_facebook_auth"
 [dependencies]
 
 linked=[
-"./GodotFacebookAuth/FBAEMKit.xcframework",
-"./GodotFacebookAuth/FBSDKCoreKit.xcframework",
-"./GodotFacebookAuth/FBSDKLoginKit.xcframework",
-"./GodotFacebookAuth/FBSDKCoreKit_Basics.xcframework"
+"./FacebookSDK/FBAEMKit.xcframework",
+"./FacebookSDK/FBSDKCoreKit.xcframework",
+"./FacebookSDK/FBSDKLoginKit.xcframework",
+"./FacebookSDK/FBSDKCoreKit_Basics.xcframework"
 ]
 
 system=[
