@@ -2,8 +2,7 @@
 
 plugin_name=GodotFacebookAuth
 
-scons_version=3.x
-godot_version=3.3.4
+godot_version=3.4
 
 declare -a targets=(Release Debug)
 
